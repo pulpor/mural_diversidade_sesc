@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icon {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    z-index: -1; /* Adicione esta linha */
+}
+
+.icon:hover {
+    z-index: 10;
+}
+
+.icon:hover:not(:has(.info-card.active)) {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.container:hover .icon {
+    filter: brightness(0.5);
+}
+
+.container .icon:hover {
+    filter: brightness(1.1);
+}
+
+#card-deficiencia{    
+    z-index: 1000; /* Aumente o valor aqui */
+}
+
+.info-card {
+    position: absolute;
+    background: #fff;
+    color: #333;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    max-width: 320px;
+    z-index: 1000; /* Aumente o valor aqui */
+    transform: translate(-50%, -130%);
+    display: none;
+    animation: fadeIn 0.5s ease;
+   
+}
+
+.info-card.active {
+    display: block;
+    z-index: 1000; /* Aumente o valor aqui */
+}
+
+.info-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #111;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff3b3b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    background-image: url(./sesc.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    max-width: 1200px;
+    height: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.left-side {
+    width: 50%;
+    position: relative;
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#doughnutChart {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+#legendContainer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -130%);
+    }
+}
+
+@media (max-width: 600px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .info-card {
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .info-card h3 {
+        font-size: 16px;
+    }
+
+    .info-card p {
+        font-size: 12px;
+    }
+}
