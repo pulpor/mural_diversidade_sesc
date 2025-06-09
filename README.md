@@ -69,7 +69,7 @@ Esse projeto foi desenvolvido com foco em:
 
 - Ícones: icons8.com  
 - Gráficos: chartjs.org  
-- Design e Desenvolvimento: Seu Nome Aqui
+- Design e Desenvolvimento: Leonardo Pulpor
 
 ## 📄 Licença
 
