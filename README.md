@@ -4,7 +4,7 @@ Um projeto visual e interativo criado para exibir dados sobre diversidade, cren�
 
 ## 📸 Prévia
 
-(Insira aqui uma imagem de demonstração: `./mapa.jpg`)
+![Mural Diversidade no SESC](./mapa.png)
 
 ## 🚀 Funcionalidades
 
