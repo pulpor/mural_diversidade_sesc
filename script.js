@@ -2,7 +2,7 @@ const iconsData = [
   {
     id: "personalidade",
     image: "https://img.icons8.com/color/48/brain.png",
-    position: { x: 10, y: 20 },
+    position: { x: 20, y: 30 },
     title: "Personalidade",
     description: "44% se consideram introvertidos, 56% extrovertidos.",
     chartData: {
@@ -67,7 +67,7 @@ const iconsData = [
   },
   {
     id: "crenca",
-    image: "https://img.icons8.com/color/48/praying.png",
+    image: "https://img.icons8.com/color/48/hug.png",
     position: { x: 80, y: 50 },
     title: "Crença",
     description: "77% possuem alguma crença religiosa.",
